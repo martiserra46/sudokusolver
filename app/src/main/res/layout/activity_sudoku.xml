@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvc.controller.activities.SudokuActivity">
+
+    <com.martiserramolina.sudokusolver.mvc.view.customviews.SudokuView
+        android:id="@+id/sudoku"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/numbers_scroll_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solve" />
+
+    <HorizontalScrollView
+        android:id="@+id/numbers_scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioGroup
+            android:id="@+id/values_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/zero"
+                style="@style/numberRadioButton"
+                android:checked="true"
+                android:text="@string/remove" />
+
+            <RadioButton
+                android:id="@+id/one"
+                style="@style/numberRadioButton"
+                android:text="@string/one" />
+
+            <RadioButton
+                android:id="@+id/two"
+                style="@style/numberRadioButton"
+                android:text="@string/two" />
+
+            <RadioButton
+                android:id="@+id/three"
+                style="@style/numberRadioButton"
+                android:text="@string/three" />
+
+            <RadioButton
+                android:id="@+id/four"
+                style="@style/numberRadioButton"
+                android:text="@string/four" />
+
+            <RadioButton
+                android:id="@+id/five"
+                style="@style/numberRadioButton"
+                android:text="@string/five" />
+
+            <RadioButton
+                android:id="@+id/six"
+                style="@style/numberRadioButton"
+                android:text="@string/six" />
+
+            <RadioButton
+                android:id="@+id/seven"
+                style="@style/numberRadioButton"
+                android:text="@string/seven" />
+
+            <RadioButton
+                android:id="@+id/eight"
+                style="@style/numberRadioButton"
+                android:text="@string/eight" />
+
+            <RadioButton
+                android:id="@+id/nine"
+                style="@style/numberRadioButton"
+                android:text="@string/nine" />
+
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/solve"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/solve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reset"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
